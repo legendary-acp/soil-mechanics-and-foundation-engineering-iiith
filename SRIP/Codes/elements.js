@@ -2,15 +2,15 @@ class soil {
 
     constructor(x1) {
         this.x = x1;
-        let width = 200,
-        height = 125,
-        y = 425;
-        
+        this.width = 200;
+        this.height = 125;
+        this.y = 425;
+
     }
 
     compress() {
-        y = y + 1;
-        height = height - 1;
+        this.y = this.y + 1;
+        this.height = this.height - 1;
         this.show();
     }
 
@@ -23,22 +23,31 @@ class weight {
 
     constructor(x) {
         this.x1 = x;
-        var y1 = 200,
-        x2 =this.x1 + 200,
-        y2 = 200,
-        x3 = (this.x1 + x2) / 2,
-        y3 = 50;
+        this.y1 = 250;
+        this.x2 = this.x1 + 200;
+        this.y2 = 250;
+        this.x3 = (this.x1 + this.x2) / 2;
+        this.y3 = 100;
     }
 
     move_down() {
-        y1 = y1 + 1;
-        y2 = y2 + 1;
-        y3 = y3 + 1;
-
-        this.show();
+        if(this.y2<425){
+            this.y1 = this.y1 + 1;
+            this.y2 = this.y2 + 1;
+            this.y3 = this.y3 + 1;
+            clear();
+            this.show();
+        }
     }
 
     show() {
         triangle(this.x1, this.y1, this.x2, this.y2, this.x3, this.y3);
     }
 };
+
+/*
+rect(100, 425, 200, 125);
+rect(400, 375, 200, 175);
+rect(700, 375, 200, 175);
+rect(1000, 375, 200, 175);
+*/
