@@ -2,8 +2,8 @@ class soil {
 
     constructor(x1) {
         this.x = x1;
-        this.width = 200;
-        this.height = 125;
+        this.width = 100;
+        this.height = 60;
         this.y = 425;
 
     }
@@ -15,6 +15,7 @@ class soil {
     }
 
     show() {
+        fill(109, 88, 74);
         rect(this.x, this.y, this.width, this.height);
     }
 }
@@ -24,10 +25,10 @@ class weight {
     constructor(x) {
         this.x1 = x;
         this.y1 = 250;
-        this.x2 = this.x1 + 200;
+        this.x2 = this.x1 + 100;
         this.y2 = 250;
         this.x3 = (this.x1 + this.x2) / 2;
-        this.y3 = 100;
+        this.y3 = 190;
     }
 
     move_down() {
@@ -35,12 +36,11 @@ class weight {
             this.y1 = this.y1 + 0.5;
             this.y2 = this.y2 + 0.5;
             this.y3 = this.y3 + 0.5;
-            clear();
-            this.show();
         }
     }
 
     show() {
+        fill(0)
         triangle(this.x1, this.y1, this.x2, this.y2, this.x3, this.y3);
     }
 };
