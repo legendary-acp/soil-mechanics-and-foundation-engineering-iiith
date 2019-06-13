@@ -1,11 +1,12 @@
-let s = [],w = [];
+let s = [],
+	w = [];
 
 function setup() {
-	createCanvas(innerWidth - 20, innerHeight - 20);
-	background(135, 206, 235);
-
-	textSize(32);
-	text('Consolidation Test', innerWidth/2-150, 50);
+	var cnv = createCanvas(600, 800);
+	var x = (windowWidth - width) / 2;
+	var y = (windowHeight - height) / 2;
+	cnv.position(x, y);
+	background(255, 0, 200);
 
 	noStroke();
 
@@ -14,19 +15,19 @@ function setup() {
 	s[2] = new soil(650);
 	s[3] = new soil(850);
 	s[4] = new soil(1050);
-	
+
 	w[0] = new weight(450);
 	w[1] = new weight(650);
 	w[2] = new weight(850);
 	w[3] = new weight(1050)
-	
+
 }
 
 function draw() {
 	background(135, 206, 235);
 
 	textSize(32);
-	text('Consolidation Test', innerWidth/2-150, 50);
+	text('Consolidation Test', innerWidth / 2 - 150, 50);
 
 	w[0].move_down();
 	w[1].move_down();
@@ -40,4 +41,3 @@ function draw() {
 	w[2].show();
 	s[3].show();
 }
-
