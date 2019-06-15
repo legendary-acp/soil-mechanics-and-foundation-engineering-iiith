@@ -32,7 +32,7 @@ class weight {
     }
 
     move_down() {
-        if(this.y2<425){
+        if (this.y2 < 425) {
             this.y1 = this.y1 + 0.5;
             this.y2 = this.y2 + 0.5;
             this.y3 = this.y3 + 0.5;
@@ -41,7 +41,11 @@ class weight {
 
     show() {
         fill(0)
+        stroke(0);
+        strokeWeight(20);
+        strokeJoin(ROUND);
         triangle(this.x1, this.y1, this.x2, this.y2, this.x3, this.y3);
+        noStroke();
     }
 };
 
