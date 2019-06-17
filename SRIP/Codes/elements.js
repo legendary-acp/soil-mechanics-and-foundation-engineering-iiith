@@ -8,12 +8,19 @@ class soil {
 
     }
 
-    compress() {
-        this.y = this.y + 1;
-        this.height = this.height - 1;
-        this.show();
+    compress(n) {
+        if (this.height > 10) {
+            this.y = this.y + 1;
+            this.height = this.height - 1;
+        }
+        console.log("hello");
     }
-
+    expand(n){
+        if (this.height < n) {
+            this.y = this.y - 1;
+            this.height = this.height + 1;
+        }
+    }
     show() {
         fill(109, 88, 74);
         rect(this.x, this.y, this.width, this.height);
@@ -31,12 +38,21 @@ class weight {
         this.y3 = 190;
     }
 
-    move_down() {
-        if (this.y2 < 425) {
+    move_down(wtn,n) {
+        if (this.y2 < n && wtn % 2 == 1) {
             this.y1 = this.y1 + 0.5;
             this.y2 = this.y2 + 0.5;
             this.y3 = this.y3 + 0.5;
         }
+        else if (this.y2 < n && wtn % 2 == 1) {
+            this.y1 = this.y1 + 0.5;
+            this.y2 = this.y2 + 0.5;
+            this.y3 = this.y3 + 0.5;
+        }
+        else{
+            wtn = wtn + 1;
+        }
+        return wtn;
     }
 
     show() {
