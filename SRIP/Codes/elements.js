@@ -9,11 +9,12 @@ class soil {
     }
 
     compress(n) {
-        if (this.height > 10) {
-            this.y = this.y + 1;
-            this.height = this.height - 1;
+        if (this.height > n) {
+            this.y = this.y + 0.5;
+            this.height = this.height - 0.5;
+            console.log(this.height);
         }
-        console.log("hello");
+        
     }
     expand(n){
         if (this.height < n) {
@@ -44,7 +45,7 @@ class weight {
             this.y2 = this.y2 + 0.5;
             this.y3 = this.y3 + 0.5;
         }
-        else if (this.y2 < n && wtn % 2 == 1) {
+        else if (this.y2 < n && wtn % 2 == 0) {
             this.y1 = this.y1 + 0.5;
             this.y2 = this.y2 + 0.5;
             this.y3 = this.y3 + 0.5;
