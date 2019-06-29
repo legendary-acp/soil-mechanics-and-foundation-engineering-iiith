@@ -18,8 +18,8 @@ class soil {
     }
     expand(n) {
         if (this.height < n) {
-            this.y = this.y - 1;
-            this.height = this.height + 1;
+            this.y = this.y - 0.5;
+            this.height = this.height + 0.5;
         }
     }
     show() {
@@ -54,6 +54,16 @@ class weight {
         return wtn;
     }
 
+    move_up(wtn) {
+        if (this.y2 > 300) {
+            this.y1 = this.y1 - 1;
+            this.y2 = this.y2 - 1;
+            this.y3 = this.y3 - 1;
+        } else
+            wtn = wtn + 1;
+        return wtn;
+    }
+
     show(i) {
         fill(0)
         stroke(0);
@@ -74,7 +84,7 @@ class weight {
                 text('10 Tonne', this.x1 + 15, this.y2 - 10);
                 break;
             case 3:
-                text('10 Tonne', this.x1 + 20, this.y2 - 10);
+                text('10 Tonne', this.x1 + 15, this.y2 - 10);
                 break;
         }
         fill(0);

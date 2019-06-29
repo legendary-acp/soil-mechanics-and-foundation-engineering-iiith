@@ -29,6 +29,8 @@ function draw() {
 		s[2].show();
 		w[2].show(2);
 		s[3].show();
+		w[3].show(3);
+		s[4].show();
 
 		switch (wtn) {
 			case 1:
@@ -52,16 +54,11 @@ function draw() {
 				s[3].compress(40);
 				wtn = w[2].move_down(wtn, 435);
 				break;
+			case 7:
+				s[4].expand(50);
+				wtn=w[3].move_up(wtn);
 		}
 
-		if (wtn == 7) {
-			s[4].height = 40;
-			s[4].y = 445;
-			w[3].y1 = w[3].y2 = 445;
-			w[3].y3 = 385;
-
-			
-		}
 	}
 }
 
@@ -84,5 +81,11 @@ function stuff() {
 	w[2] = new weight(550);
 	w[3] = new weight(700);
 	w[4] = new weight(750);
+
+	
+	s[4].height = 40;
+	s[4].y = 445;
+	w[3].y1 = w[3].y2 = 435;
+	w[3].y3 = 385;
 
 }
