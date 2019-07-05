@@ -4,6 +4,7 @@ var start = 0;
 let wtn = 1;
 
 function setup() {
+	
 	var cnv = createCanvas(1000, 600);
 	var x = (windowWidth - width) / 2;
 	var y = (windowHeight - height) / 2;
