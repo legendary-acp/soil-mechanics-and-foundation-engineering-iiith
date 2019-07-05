@@ -11,7 +11,7 @@ function setup() {
 
 	background(255);
 	noStroke();
-
+	stuff();
 }
 
 function draw() {
@@ -64,7 +64,6 @@ function draw() {
 
 function strt() {
 	start = 1;
-	stuff();
 	wtn = 1;
 }
 
@@ -74,15 +73,12 @@ function stuff() {
 	s[2] = new soil(400);
 	s[3] = new soil(550);
 	s[4] = new soil(700);
-	s[5] = new soil(850);
 
 	w[0] = new weight(250);
 	w[1] = new weight(400);
 	w[2] = new weight(550);
 	w[3] = new weight(700);
-	w[4] = new weight(750);
 
-	
 	s[4].height = 40;
 	s[4].y = 445;
 	w[3].y1 = w[3].y2 = 435;
