@@ -1,5 +1,6 @@
 let s = [],
-	w = [];
+	w = [],
+	wtr = [];
 var start = 0;
 let wtn = 1;
 
@@ -26,6 +27,7 @@ function draw() {
 		s[0].show();
 		w[0].show(0);
 		s[1].show();
+		wtr[0].show();
 		w[1].show(1);
 		s[2].show();
 		w[2].show(2);
@@ -39,6 +41,7 @@ function draw() {
 				break;
 			case 2:
 				s[1].compress(50);
+				wtr[0].flow(6);
 				wtn = w[0].move_down(wtn, 420);
 				break;
 			case 3:
@@ -64,7 +67,10 @@ function draw() {
 }
 
 function strt() {
+	if (start != 1)
 	start = 1;
+	else
+	stuff();
 	wtn = 1;
 }
 
@@ -80,9 +86,15 @@ function stuff() {
 	w[2] = new weight(550);
 	w[3] = new weight(700);
 
+	wtr[0] = new wtrcrv(250);
+	wtr[1] = new wtrcrv(400);
+	wtr[2] = new wtrcrv(550);
+
 	s[4].height = 40;
 	s[4].y = 445;
 	w[3].y1 = w[3].y2 = 435;
 	w[3].y3 = 385;
+
+	wtr[0].s1();
 
 }

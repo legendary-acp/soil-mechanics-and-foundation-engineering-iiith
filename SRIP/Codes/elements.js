@@ -7,14 +7,14 @@ class soil {
         this.y = 425;
         this.ln = [];
         this.lines();
-        
+
     }
 
     lines() {
         this.lh = 426;
-        while(this.lh < 485){
+        while (this.lh < 485) {
             this.wid = 0;
-            while(this.wid<88){
+            while (this.wid < 88) {
                 this.dif = Math.floor(Math.random() * 10) + 2;
                 this.wid += this.dif;
                 this.ln.push([this.x + this.wid, this.lh, 1]);
@@ -25,8 +25,8 @@ class soil {
 
     compress(n) {
         if (this.height > n) {
-            this.y = this.y + 4;
-            this.height = this.height - 4;
+            this.y = this.y + 1;
+            this.height = this.height - 1;
         }
     }
 
@@ -41,12 +41,12 @@ class soil {
         fill(129, 60, 32);
         rect(this.x, this.y, this.width, this.height);
         this.it = 0;
-        fill(0,0,0);
+        fill(0, 0, 0);
         stroke(0);
         strokeWeight(1);
         while (this.it < this.ln.length) {
-            if(this.ln[this.it][1]>this.y)
-            line(this.ln[this.it][0], this.ln[this.it][1], this.ln[this.it][0] + this.ln[this.it][2], this.ln[this.it][1]);
+            if (this.ln[this.it][1] > this.y)
+                line(this.ln[this.it][0], this.ln[this.it][1], this.ln[this.it][0] + this.ln[this.it][2], this.ln[this.it][1]);
             this.it += 1;
         }
         noStroke();
@@ -68,14 +68,12 @@ class weight {
             this.y1 = this.y1 + 4;
             this.y2 = this.y2 + 4;
             this.y3 = this.y3 + 4;
-        } 
-        else if (this.y2 < n && wtn % 2 == 0) {
-            this.y1 = this.y1 + 4;
-            this.y2 = this.y2 + 4;
-            this.y3 = this.y3 + 4;
-        } 
-        else 
-            wtn = wtn + 1;        
+        } else if (this.y2 < n && wtn % 2 == 0) {
+            this.y1 = this.y1 + 1;
+            this.y2 = this.y2 + 1;
+            this.y3 = this.y3 + 1;
+        } else
+            wtn = wtn + 1;
         return wtn;
     }
 
@@ -84,8 +82,7 @@ class weight {
             this.y1 = this.y1 - 2;
             this.y2 = this.y2 - 2;
             this.y3 = this.y3 - 2;
-        } 
-        else
+        } else
             wtn = wtn + 1;
         return wtn;
     }
@@ -116,3 +113,53 @@ class weight {
         fill(0);
     }
 };
+
+class wtrcrv {
+    constructor(x1) {
+        this.x = x1;
+        this.y = 470;
+        this.vx = [];
+        this.vy = [];
+    }
+
+    s1() {
+        this.vx[0] = this.x+10;
+        this.vy[0] = this.y;
+        this.vx[1] = this.x+15;
+        this.vy[1] = this.y+13;
+        this.vx[2] = this.x+30;
+        this.vy[2] = this.y+12;
+        this.vx[3] = this.x+40;
+        this.vy[3] = this.y+8;
+        this.vx[4] = this.x+50;
+        this.vy[4] = this.y;
+        this.vx[5] = this.x+60;
+        this.vy[5] = this.y+10;
+        this.vx[6] = this.x+85;
+        this.vy[6] = this.y+6;
+        this.vx[7] = this.x+90;
+        this.vy[7] = this.y;
+    }
+
+    flow(spd){
+        this.i = 0;
+        while(this.i<8){
+            this.vy[this.i]+=spd;
+            this.i++;
+        }
+    }
+
+    show() {
+        fill(0,0,250);
+        noStroke();
+        beginShape();
+        curveVertex(this.vx[0], this.vy[0]);
+        this.i=0;
+        while(this.i<8){
+            curveVertex(this.vx[this.i], this.vy[this.i]);
+            this.i++;
+        }
+        curveVertex(this.vx[7], this.vy[7]);
+        endShape();
+    }
+}
