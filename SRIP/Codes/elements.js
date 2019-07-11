@@ -120,6 +120,7 @@ class wtrcrv {
         this.y = 470;
         this.vx = [];
         this.vy = [];
+        this.count = 0;
     }
 
     s1() {
@@ -132,7 +133,7 @@ class wtrcrv {
         this.vx[3] = this.x+40;
         this.vy[3] = this.y+8;
         this.vx[4] = this.x+50;
-        this.vy[4] = this.y;
+        this.vy[4] = this.y+4;
         this.vx[5] = this.x+60;
         this.vy[5] = this.y+10;
         this.vx[6] = this.x+85;
@@ -141,12 +142,72 @@ class wtrcrv {
         this.vy[7] = this.y;
     }
 
-    flow(spd){
+    flow1(){
         this.i = 0;
         while(this.i<8){
-            this.vy[this.i]+=spd;
+            this.vy[this.i]+=5;
             this.i++;
         }
+    }
+
+    s2() {
+        this.vx[0] = this.x;
+        this.vy[0] = this.y;
+        this.vx[1] = this.x+15;
+        this.vy[1] = this.y+13;
+        this.vx[2] = this.x+30;
+        this.vy[2] = this.y+12;
+        this.vx[3] = this.x+40;
+        this.vy[3] = this.y+8;
+        this.vx[4] = this.x+50;
+        this.vy[4] = this.y+10;
+        this.vx[5] = this.x+60;
+        this.vy[5] = this.y+13;
+        this.vx[6] = this.x+97;
+        this.vy[6] = this.y+15;
+        this.vx[7] = this.x+100;
+        this.vy[7] = this.y;
+    }
+
+    flow2(){
+        this.i = 0;
+        while(this.i<8){
+            this.vy[this.i]+=1;
+            this.i++;
+        }
+        this.vx[6]++;
+    }
+
+    s3() {
+        this.y-=5;
+        this.vx[0] = this.x;
+        this.vy[0] = this.y-5;
+        this.vx[1] = this.x+13;
+        this.vy[1] = this.y;
+        this.vx[2] = this.x+10;
+        this.vy[2] = this.y+15;
+        this.vx[3] = this.x+40;
+        this.vy[3] = this.y+20;
+        this.vx[4] = this.x+60;
+        this.vy[4] = this.y+15;
+        this.vx[5] = this.x+90;
+        this.vy[5] = this.y+20;
+        this.vx[6] = this.x+92;
+        this.vy[6] = this.y+20;
+        this.vx[7] = this.x+100;
+        this.vy[7] = this.y-5;
+    }
+    
+    flow3(){
+        this.i = 0;
+        this.count++;
+        console.log(this.count);
+        while(this.i<8){
+            this.vy[this.i]+=0.8;
+            this.i++;
+        }
+        this.vx[6]++;
+        this.vx[1]--;
     }
 
     show() {

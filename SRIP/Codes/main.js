@@ -6,7 +6,7 @@ let wtn = 1;
 
 function setup() {
 	
-	var cnv = createCanvas(1000, 600);
+	var cnv = createCanvas(1000, window.innerHeight-25);
 	var x = (windowWidth - width) / 2;
 	var y = (windowHeight - height) / 2;
 	cnv.position(x, y);
@@ -26,12 +26,17 @@ function draw() {
 	if (start % 2 == 1) {
 		s[0].show();
 		w[0].show(0);
-		s[1].show();
 		wtr[0].show();
+		s[1].show();
+		
 		w[1].show(1);
+		wtr[1].show();
 		s[2].show();
+		
 		w[2].show(2);
+		wtr[2].show();
 		s[3].show();
+		
 		w[3].show(3);
 		s[4].show();
 
@@ -41,7 +46,7 @@ function draw() {
 				break;
 			case 2:
 				s[1].compress(50);
-				wtr[0].flow(6);
+				wtr[0].flow1();
 				wtn = w[0].move_down(wtn, 420);
 				break;
 			case 3:
@@ -49,6 +54,7 @@ function draw() {
 				break;
 			case 4:
 				s[2].compress(45);
+				wtr[1].flow2();
 				wtn = w[1].move_down(wtn, 430);
 				break;
 			case 5:
@@ -56,6 +62,7 @@ function draw() {
 				break;
 			case 6:
 				s[3].compress(40);
+				wtr[2].flow3();
 				wtn = w[2].move_down(wtn, 435);
 				break;
 			case 7:
@@ -96,5 +103,7 @@ function stuff() {
 	w[3].y3 = 385;
 
 	wtr[0].s1();
+	wtr[1].s2();
+	wtr[2].s3();
 
 }
