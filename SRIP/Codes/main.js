@@ -42,32 +42,32 @@ function draw() {
 
 		switch (wtn) {
 			case 1:
-				wtn = w[0].move_down(wtn, 415);
+				wtn = w[0].fall(wtn, 415);
 				break;
 			case 2:
 				s[1].compress(50);
 				wtr[0].flow1();
-				wtn = w[0].move_down(wtn, 420);
+				wtn = w[0].fall(wtn, 420);
 				break;
 			case 3:
-				wtn = w[1].move_down(wtn, 415);
+				wtn = w[1].fall(wtn, 415);
 				break;
 			case 4:
 				s[2].compress(45);
 				wtr[1].flow2();
-				wtn = w[1].move_down(wtn, 430);
+				wtn = w[1].fall(wtn, 430);
 				break;
 			case 5:
-				wtn = w[2].move_down(wtn, 415);
+				wtn = w[2].fall(wtn, 415);
 				break;
 			case 6:
 				s[3].compress(40);
 				wtr[2].flow3();
-				wtn = w[2].move_down(wtn, 435);
+				wtn = w[2].fall(wtn, 435);
 				break;
 			case 7:
 				s[4].expand(50);
-				wtn=w[3].move_up(wtn);
+				wtn=w[3].lift(wtn);
 		}
 
 	}
@@ -93,9 +93,9 @@ function stuff() {
 	w[2] = new weight(550);
 	w[3] = new weight(700);
 
-	wtr[0] = new wtrcrv(250);
-	wtr[1] = new wtrcrv(400);
-	wtr[2] = new wtrcrv(550);
+	wtr[0] = new water_patch(250);
+	wtr[1] = new water_patch(400);
+	wtr[2] = new water_patch(550);
 
 	s[4].height = 40;
 	s[4].y = 445;

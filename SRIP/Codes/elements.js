@@ -6,11 +6,11 @@ class soil {
         this.height = 60;
         this.y = 425;
         this.ln = [];
-        this.lines();
+        this.strk();
 
     }
 
-    lines() {
+    strk() {
         this.lh = 426;
         while (this.lh < 485) {
             this.wid = 0;
@@ -63,7 +63,7 @@ class weight {
         this.y3 = 190;
     }
 
-    move_down(wtn, n) {
+    fall(wtn, n) {
         if (this.y2 < n && wtn % 2 == 1) {
             this.y1 = this.y1 + 4;
             this.y2 = this.y2 + 4;
@@ -77,7 +77,7 @@ class weight {
         return wtn;
     }
 
-    move_up(wtn) {
+    lift(wtn) {
         if (this.y2 > 300) {
             this.y1 = this.y1 - 2;
             this.y2 = this.y2 - 2;
@@ -114,7 +114,7 @@ class weight {
     }
 };
 
-class wtrcrv {
+class water_patch {
     constructor(x1) {
         this.x = x1;
         this.y = 470;
