@@ -157,7 +157,7 @@ class water_patch {
     s2() {
         this.vx[0] = this.x;
         this.vy[0] = this.y-5;
-        this.vx[1] = this.x;
+        this.vx[1] = this.x+3;
         this.vy[1] = this.y+10;
         this.vx[2] = this.x+30;
         this.vy[2] = this.y+10;
@@ -168,9 +168,9 @@ class water_patch {
         this.vx[5] = this.x+60;
         this.vy[5] = this.y+13;
         this.vx[6] = this.x+97;
-        this.vy[6] = this.y+15;
+        this.vy[6] = this.y+12;
         this.vx[7] = this.x+100;
-        this.vy[7] = this.y;
+        this.vy[7] = this.y-2;
     }
 
     flow2(){
