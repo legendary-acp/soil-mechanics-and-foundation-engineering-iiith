@@ -1,12 +1,12 @@
-**Experiment Code Documentation**
+# Experiment Code Documentation
 
-**Introduction**
+## Introduction
 
 This document captures the experiment implementation details.
 
-**Code Details**
+## Code Details
 
-**File Name: element.js**
+### File Name: element.js**
 
 **File Description:**
 
@@ -54,46 +54,44 @@ It contains all the operation that are executed weight it like compression, expa
 | flow3 () | Used to move 3rd water patch |
 | show () | It is used to show the water patch on canvas |
 
+### File Name: main.js
+
+**File Description:**
+
+This file is responsible for creation of canvas and telling object how to move in canvas. Few function and their explanation are listed below:
+
+| **Name of function** | **Description** |
+| --- | --- |
+| setup () | It initializes canvas making process of p5.js |
+| draw () | It is used to redraw the objects after any changes are made. This function is called again and again automatically in p5.js |
+| strt () | It is used to start/reset the animation. It is called from button on HTML page |
+| stuff () | It is used to create objects of different classes which were created in element.js |
+
+
+### File Name: index.html
+
+**File Description:**
+
+This file is main file which is open in browser for starting of animation. It contains a button which is used to start or reset the animation.  
+
 **Other details:**
 
 **Formulas used in the Experiment**
 
-1. Final training dataset made would be of this type dataArray = [[x1 y1 0],
+Most of the formulas used are based on cordinate system. Two main formulas used are listed below:
 
-[x1 y1 0],
+1. **For downwards movement**
 
-[x2 y2 1],
+obj.y = obj.y + 1 //Increase the y cordinates of each point of object
 
-[x2 y2 1],
+2. **For compression movement of mud**
 
-[x2 y2 1]
+mud.y = mud.y - 1 //Decrease the y cordinates of rectangle used for making mud
+mud.height = mud.height - 1 //Decrease the height of rectangle used for making mud
 
-2. Initially the weights vector is assigned [0, 0].
+3. **For expansion movement of mud**
 
-3. There are two inputs values (x1 and y1) and 2 weight values (w1 and w2). The
+mud.y = mud.y + 1 //Increase the y cordinates of rectangle used for making mud
+mud.height = mud.height + 1 //Increase the height of rectangle used for making mud
 
-activation equation used is activation = ( w1 \* x1 + w2 \* y1 ) + bias
 
-4. If activation greater than or equal to 0, then function returns 1, else returns 0
-
-5. There are 2 loops running,
-
-○ Loop over each row in the training data for each iteration
-
-○ Loop over each weight and update it for a row for each iteration
-
-6. Then the error(error = 0/(or)1 - prediction) is calculated. Until the errors becomes 0, weights are modified using the following formula
-
-Weights [j] = weights [j] + ( learning Parameter \* error \* dataArray [c][j] )
-
-7. Now the final weights are displayed under &#39;Value of Weights&#39;. The final
-
-perceptron line is drawn using the following 2 points:
-
-x1 = ( - bias / weights [0] ) x2 = 0
-
-y1 = 0 y2 = ( - bias / weights [1] )
-
-and the perceptron equation is:
-
-y = ( - ( b / w2 ) / ( b / w0 ) ) \* x + ( - b / w1 )
