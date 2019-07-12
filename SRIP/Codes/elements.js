@@ -63,11 +63,11 @@ class weight {
         this.y3 = 190;
     }
 
-    fall(wtn, n) {
+    fall(wtn, n, spd) {
         if (this.y2 < n && wtn % 2 == 1) {
-            this.y1 = this.y1 + 4;
-            this.y2 = this.y2 + 4;
-            this.y3 = this.y3 + 4;
+            this.y1 = this.y1 + (5-spd);
+            this.y2 = this.y2 + (5-spd);
+            this.y3 = this.y3 + (5-spd);
         } else if (this.y2 < n && wtn % 2 == 0) {
             this.y1 = this.y1 + 1;
             this.y2 = this.y2 + 1;
@@ -87,7 +87,12 @@ class weight {
         return wtn;
     }
 
+
     show(i) {
+        fill(117);
+        ellipse(this.x3, this.y3-12, 20, 20);
+        fill(255);
+        ellipse(this.x3, this.y3-12, 12, 12);
         fill(0)
         stroke(0);
         strokeWeight(20);
@@ -120,7 +125,6 @@ class water_patch {
         this.y = 470;
         this.vx = [];
         this.vy = [];
-        this.count = 0;
     }
 
     s1() {
@@ -152,15 +156,15 @@ class water_patch {
 
     s2() {
         this.vx[0] = this.x;
-        this.vy[0] = this.y;
-        this.vx[1] = this.x+15;
-        this.vy[1] = this.y+13;
+        this.vy[0] = this.y-5;
+        this.vx[1] = this.x;
+        this.vy[1] = this.y+10;
         this.vx[2] = this.x+30;
-        this.vy[2] = this.y+12;
+        this.vy[2] = this.y+10;
         this.vx[3] = this.x+40;
         this.vy[3] = this.y+8;
         this.vx[4] = this.x+50;
-        this.vy[4] = this.y+10;
+        this.vy[4] = this.y+12;
         this.vx[5] = this.x+60;
         this.vy[5] = this.y+13;
         this.vx[6] = this.x+97;
@@ -175,6 +179,7 @@ class water_patch {
             this.vy[this.i]+=1;
             this.i++;
         }
+        this.vx[1]--;
         this.vx[6]++;
     }
 
@@ -200,8 +205,6 @@ class water_patch {
     
     flow3(){
         this.i = 0;
-        this.count++;
-        console.log(this.count);
         while(this.i<8){
             this.vy[this.i]+=0.8;
             this.i++;
@@ -211,7 +214,7 @@ class water_patch {
     }
 
     show() {
-        fill(0,0,250);
+        fill(0,102,255);
         noStroke();
         beginShape();
         curveVertex(this.vx[0], this.vy[0]);

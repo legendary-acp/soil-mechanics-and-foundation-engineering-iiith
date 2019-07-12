@@ -5,8 +5,8 @@ var start = 0;
 let wtn = 1;
 
 function setup() {
-	
-	var cnv = createCanvas(1000, window.innerHeight-25);
+
+	var cnv = createCanvas(1000, window.innerHeight - 25);
 	var x = (windowWidth - width) / 2;
 	var y = (windowHeight - height) / 2;
 	cnv.position(x, y);
@@ -23,51 +23,54 @@ function draw() {
 	textSize(32);
 	text('Consolidation Test', (windowWidth - width) / 2 + 200, 50);
 
+	s[0].show();
+	w[0].show(0);
+	wtr[0].show();
+	s[1].show();
+
+	w[1].show(1);
+	wtr[1].show();
+	s[2].show();
+
+	w[2].show(2);
+	wtr[2].show();
+	s[3].show();
+
 	if (start % 2 == 1) {
-		s[0].show();
-		w[0].show(0);
-		wtr[0].show();
-		s[1].show();
-		
-		w[1].show(1);
-		wtr[1].show();
-		s[2].show();
-		
-		w[2].show(2);
-		wtr[2].show();
-		s[3].show();
-		
-		w[3].show(3);
-		s[4].show();
+
+		if (wtn > 6) {
+			w[3].show(3);
+			s[4].show();
+		}
 
 		switch (wtn) {
 			case 1:
-				wtn = w[0].fall(wtn, 415);
+				wtn = w[0].fall(wtn, 415,1);
 				break;
 			case 2:
 				s[1].compress(50);
 				wtr[0].flow1();
-				wtn = w[0].fall(wtn, 420);
+				wtn = w[0].fall(wtn, 420,1);
 				break;
 			case 3:
-				wtn = w[1].fall(wtn, 415);
+				wtn = w[1].fall(wtn, 415,2);
 				break;
 			case 4:
 				s[2].compress(45);
 				wtr[1].flow2();
-				wtn = w[1].fall(wtn, 430);
+				wtn = w[1].fall(wtn, 430,2);
 				break;
 			case 5:
-				wtn = w[2].fall(wtn, 415);
+				wtn = w[2].fall(wtn, 415,3);
 				break;
 			case 6:
 				s[3].compress(40);
 				wtr[2].flow3();
-				wtn = w[2].fall(wtn, 435);
+				wtn = w[2].fall(wtn, 435,3);
 				break;
 			case 7:
 				s[4].expand(50);
-				wtn=w[3].lift(wtn);
+				wtn = w[3].lift(wtn);
 		}
 
 	}
@@ -75,9 +78,9 @@ function draw() {
 
 function strt() {
 	if (start != 1)
-	start = 1;
+		start = 1;
 	else
-	stuff();
+		stuff();
 	wtn = 1;
 }
 
