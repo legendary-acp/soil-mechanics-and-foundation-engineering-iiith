@@ -260,5 +260,38 @@
             "answer": "minimum and maximum",
             "description": "" 
         }
+        {
+            "q": "Rise of water table above the ground surface causes",
+            "option": [
+                "Equal increase in pore water pressure and total stress",
+                "Equal decrease in pore water pressure and total stress",
+                "Increase in pore water pressure but decrease in total stress",
+                "Decrease in pore water pressure but increase in total stress"
+            ],
+            "answer": "Equal increase in pore water pressure and total stress",
+            "description": "" 
+        }
+        {
+            "q": "Terzaghi’s theory of one dimensional consolidation assumes",
+            "option": [
+                "Soil is homogeneous and fully saturated",
+                "Water and soil particles are incompressible",
+                "Deformation of the soil, is entirely due to change in volume",
+                "All of the above"
+            ],
+            "answer": "All of the above",
+            "description": "" 
+        }
+        {
+            "q": "If the material of the base of the Casagrande liquid limit device on which the cup containing soil paste drops is softer than the standard hard rubber, then",
+            "option": [
+                "The liquid limit of soil always increases",
+                "The liquid limit of soil always decreases",
+                "The liquid limit of soil may increase",
+                "The liquid limit of soil may decrease"
+            ],
+            "answer": "The liquid limit of soil always increases",
+            "description": "" 
+        }
     ]
 }
