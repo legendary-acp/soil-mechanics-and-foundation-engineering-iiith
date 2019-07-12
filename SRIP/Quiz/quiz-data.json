@@ -1,0 +1,88 @@
+{
+    "artciles": [
+        {
+            "quiztitle":"Quiz for Experiment",
+            "containers":"5"
+        },
+        {
+            "q": "Terzaghi's one-dimensional consolidation
+            theory assumes that",
+            "option": [
+                "e vs. p relationship is linear",
+                "e vs. log p relationship is linear",
+                "p vs. log e relationship is linear",
+                "e vs log p/p0 relationship is linear"
+            ],
+            "answer": "e vs. log p relationship is linear",
+            "description": ""
+        },
+        {
+            "q": "The coefficient of consolidation is used for",
+            "option": [
+                "establishing the duration of primary consolidation",
+                "estimating the amount of settlement for a load increment",
+                "determining the depth to which the soil is stressed when loads are applied on the surface of a soil deposit",
+                "determining the preconsolidation pressure for soil deposits known to be over consolidated"
+            ],
+            "answer": "establishing the duration of primary consolidation",
+            "description": "For a given degree of consolidation U, time factor T has a certain value, depending upon the boundary conditions governing the problem. 
+            The time required for a soil to reach a given degree of consolidation can be calculated by knowing the length of drainage path and coefficient of consolidation."
+        },
+        {
+            "q": "The slope of the e-log curve for a soil mass gives",
+            "option": [
+                "coefficient of permeability, k",
+                "coefficient of consolidation C",
+                "compression index, C",
+                "coefficient of volume compressibility, m"
+            ],
+            "answer": "coefficient of consolidation C",
+            "description": ""
+        },
+        {
+            "q": "Sand drains are used to",
+            "option": [
+                "reduce the settlement",
+                "accelerate the consolidation",
+                "increase the permeability",
+                "transfer the load"
+            ],
+            "answer": "accelerate the consolidation",
+            "description": "The slow rate of consolidation of saturated clays of low permeability may be accelerated by means of vertical sand drains which provide for radial drainage, resulting in shortening of drainage path. Consolidation is then mainly due to horizontal radial drainage which results in a faster dissipation of excess pore water pressure."
+        },
+        {
+            "q": "Question 5",
+            "option": [
+                "Option 1",
+                "Option 2",
+                "Option 3",
+                "Option 4"
+            ],
+            "answer": "Option 2",
+            "description": "Explanation for Question 5"
+        }
+        {
+            "q": "Question 5",
+            "option": [
+                "Option 1",
+                "Option 2",
+                "Option 3",
+                "Option 4"
+            ],
+            "answer": "Option 2",
+            "description": "Explanation for Question 5"
+        }
+        {
+            "q": "Question 5",
+            "option": [
+                "Option 1",
+                "Option 2",
+                "Option 3",
+                "Option 4"
+            ],
+            "answer": "Option 2",
+            "description": "Explanation for Question 5"
+        }
+        
+    ]
+}
