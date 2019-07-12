@@ -6,7 +6,7 @@ This document captures the experiment implementation details.
 
 ## Code Details
 
-### File Name: element.js**
+### File Name: element.js
 
 **File Description:**
 
