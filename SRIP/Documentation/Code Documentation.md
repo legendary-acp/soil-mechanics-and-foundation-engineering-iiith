@@ -87,11 +87,13 @@ obj.y = obj.y + 1 //Increase the y cordinates of each point of object
 2. **For compression movement of mud**
 
 mud.y = mud.y - 1 //Decrease the y cordinates of rectangle used for making mud
+
 mud.height = mud.height - 1 //Decrease the height of rectangle used for making mud
 
 3. **For expansion movement of mud**
 
 mud.y = mud.y + 1 //Increase the y cordinates of rectangle used for making mud
+
 mud.height = mud.height + 1 //Increase the height of rectangle used for making mud
 
 
