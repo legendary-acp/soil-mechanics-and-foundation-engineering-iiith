@@ -3,25 +3,31 @@ let s = [],
 	wtr = [];
 var start = 0;
 let wtn = 1;
+var change = 0;
 
 function setup() {
-
-	var cnv = createCanvas(1000, window.innerHeight - 25);
-	var x = (windowWidth - width) / 2;
-	var y = (windowHeight - height) / 2;
-	cnv.position(x, y);
-
-	background(255);
 	noStroke();
 	stuff();
 }
 
 function draw() {
+	var cnv = createCanvas(window.innerWidth * 0.73, window.innerHeight * 0.95);
+	var x = (windowWidth - width) / 2;
+	var y = (windowHeight - height) / 2;
+	cnv.position(x, y);
+	
+	//not working
+	if(change == window.innerHeight + window.innerWidth){
+		change = window.innerHeight + window.innerWidth;
+		stuff();
+	}
 	background(255);
-
+	
+	
+	
 	fill(0);
-	textSize(32);
-	text('Consolidation Test', (windowWidth - width) / 2 + 200, 50);
+	textSize(4 / 3 * window.innerWidth * 0.02);
+	text('Consolidation Test', (windowWidth - width) / 2, window.innerWidth * 0.035);
 
 	s[0].show();
 	w[0].show(0);
@@ -45,31 +51,31 @@ function draw() {
 
 		switch (wtn) {
 			case 1:
-				wtn = w[0].fall(wtn, 415,1);
+				wtn = w[0].fall(wtn, Math.floor(415 / 610 * window.innerHeight * 0.95), 1);
 				break;
 			case 2:
-				s[1].compress(50);
+				s[1].compress(Math.floor(5 / 6 * window.innerHeight * 0.95));
 				wtr[0].flow1();
-				wtn = w[0].fall(wtn, 420,1);
+				wtn = w[0].fall(wtn, Math.floor(42 / 61 * window.innerHeight * 0.95), 1);
 				break;
 			case 3:
-				wtn = w[1].fall(wtn, 415,2);
+				wtn = w[1].fall(wtn, Math.floor(415 / 610 * window.innerHeight * 0.95), 2);
 				break;
 			case 4:
-				s[2].compress(45);
+				s[2].compress(3 / 4 * window.innerHeight * 0.95);
 				wtr[1].flow2();
-				wtn = w[1].fall(wtn, 430,2);
+				wtn = w[1].fall(wtn, Math.floor(430 / 610 * window.innerHeight * 0.95), 2);
 				break;
 			case 5:
-				wtn = w[2].fall(wtn, 415,3);
+				wtn = w[2].fall(wtn, Math.floor(415 / 610 * window.innerHeight * 0.95), 3);
 				break;
 			case 6:
-				s[3].compress(40);
+				s[3].compress(2 / 3 * window.innerHeight * 0.95);
 				wtr[2].flow3();
-				wtn = w[2].fall(wtn, 435,3);
+				wtn = w[2].fall(wtn, Math.floor(435 / 610 * window.innerHeight * 0.95), 3);
 				break;
 			case 7:
-				s[4].expand(50);
+				s[4].expand(5 / 6 * window.innerHeight * 0.95);
 				wtn = w[3].lift(wtn);
 		}
 
@@ -77,9 +83,9 @@ function draw() {
 }
 
 function strt() {
-	if (start != 1)
-		start = 1;
-	else
+	// if (start != 1)
+	 	start = 1;
+	// else
 		stuff();
 	wtn = 1;
 }
@@ -100,10 +106,10 @@ function stuff() {
 	wtr[1] = new water_patch(400);
 	wtr[2] = new water_patch(550);
 
-	s[4].height = 40;
-	s[4].y = 445;
-	w[3].y1 = w[3].y2 = 435;
-	w[3].y3 = 385;
+	s[4].height = Math.floor(40 / 610 * window.innerHeight * 0.95);
+	s[4].y = Math.floor(445 / 610 * window.innerHeight * 0.95);
+	w[3].y1 = w[3].y2 = Math.floor(435 / 610 * window.innerHeight * 0.95);
+	w[3].y3 = Math.floor(385 / 610 * window.innerHeight * 0.95);
 
 	wtr[0].s1();
 	wtr[1].s2();

@@ -1,20 +1,20 @@
 class soil {
 
     constructor(x1) {
-        this.x = x1;
-        this.width = 100;
-        this.height = 60;
-        this.y = 425;
+        this.x = Math.floor(x1 / 1000 * window.innerWidth * 0.73);
+        this.width = Math.floor(100 / 1000 * window.innerWidth * 0.73);
+        this.height = Math.floor(60 / 610 * window.innerHeight * 0.95);
+        this.y = Math.floor(425 / 610 * window.innerHeight * 0.95);
         this.ln = [];
         this.strk();
 
     }
 
     strk() {
-        this.lh = 426;
-        while (this.lh < 485) {
+        this.lh = Math.floor(425 / 610 * window.innerHeight * 0.95) + 1;
+        while (this.lh < (this.y + this.height)) {
             this.wid = 0;
-            while (this.wid < 88) {
+            while (this.wid < (this.width * 0.88)) {
                 this.dif = Math.floor(Math.random() * 10) + 2;
                 this.wid += this.dif;
                 this.ln.push([this.x + this.wid, this.lh, 1]);
@@ -32,8 +32,8 @@ class soil {
 
     expand(n) {
         if (this.height < n) {
-            this.y = this.y - 1;
-            this.height = this.height + 1;
+            this.y = this.y - 0.25;
+            this.height = this.height + 0.25;
         }
     }
 
@@ -55,19 +55,19 @@ class soil {
 
 class weight {
     constructor(x) {
-        this.x1 = x + 7;
-        this.y1 = 250;
-        this.x2 = this.x1 + 87;
-        this.y2 = 250;
+        this.x1 = x / 1000 * window.innerWidth * 0.73;
+        this.y1 = 250 / 610 * window.innerHeight * 0.95;
+        this.x2 = this.x1 + (87/ 1000 * window.innerWidth * 0.73) ;
+        this.y2 = 250 / 610 * window.innerHeight * 0.95;
         this.x3 = (this.x1 + this.x2) / 2;
-        this.y3 = 190;
+        this.y3 = 190 / 610 * window.innerHeight * 0.95;
     }
 
     fall(wtn, n, spd) {
         if (this.y2 < n && wtn % 2 == 1) {
-            this.y1 = this.y1 + (5-spd);
-            this.y2 = this.y2 + (5-spd);
-            this.y3 = this.y3 + (5-spd);
+            this.y1 = this.y1 + (5 - spd);
+            this.y2 = this.y2 + (5 - spd);
+            this.y3 = this.y3 + (5 - spd);
         } else if (this.y2 < n && wtn % 2 == 0) {
             this.y1 = this.y1 + 1;
             this.y2 = this.y2 + 1;
@@ -78,7 +78,7 @@ class weight {
     }
 
     lift(wtn) {
-        if (this.y2 > 300) {
+        if (this.y2 > Math.floor(300 / 610 * window.innerHeight * 0.95)) {
             this.y1 = this.y1 - 2;
             this.y2 = this.y2 - 2;
             this.y3 = this.y3 - 2;
@@ -90,9 +90,9 @@ class weight {
 
     show(i) {
         fill(117);
-        ellipse(this.x3, this.y3-12, 20, 20);
+        ellipse(this.x3, this.y3 - 12, 20, 20);
         fill(255);
-        ellipse(this.x3, this.y3-12, 12, 12);
+        ellipse(this.x3, this.y3 - 12, 12, 12);
         fill(0)
         stroke(0);
         strokeWeight(20);
@@ -100,19 +100,19 @@ class weight {
         triangle(this.x1, this.y1, this.x2, this.y2, this.x3, this.y3);
         noStroke();
         fill(255);
-        textSize(15);
+        textSize(4 / 6 * window.innerWidth * 0.02);
         switch (i) {
             case 0:
-                text('1 Tonne', this.x1 + 20, this.y2 - 10);
+                text('1 T', (this.x1 + this.x2) / 2 , this.y2 - 10);
                 break;
             case 1:
-                text('5 Tonne', this.x1 + 20, this.y2 - 10);
+                text('5 T', (this.x1 + this.x2) / 2 - 5, this.y2 - 10);
                 break;
             case 2:
-                text('10 Tonne', this.x1 + 15, this.y2 - 10);
+                text('10 T', (this.x1 + this.x2) / 2 - 5, this.y2 - 10);
                 break;
             case 3:
-                text('10 Tonne', this.x1 + 15, this.y2 - 10);
+                text('10 T', (this.x1 + this.x2) / 2 - 5, this.y2 - 10);
                 break;
         }
         fill(0);
@@ -128,55 +128,55 @@ class water_patch {
     }
 
     s1() {
-        this.vx[0] = this.x+10;
+        this.vx[0] = this.x + 10;
         this.vy[0] = this.y;
-        this.vx[1] = this.x+15;
-        this.vy[1] = this.y+13;
-        this.vx[2] = this.x+30;
-        this.vy[2] = this.y+12;
-        this.vx[3] = this.x+40;
-        this.vy[3] = this.y+8;
-        this.vx[4] = this.x+50;
-        this.vy[4] = this.y+4;
-        this.vx[5] = this.x+60;
-        this.vy[5] = this.y+10;
-        this.vx[6] = this.x+85;
-        this.vy[6] = this.y+6;
-        this.vx[7] = this.x+90;
+        this.vx[1] = this.x + 15;
+        this.vy[1] = this.y + 13;
+        this.vx[2] = this.x + 30;
+        this.vy[2] = this.y + 12;
+        this.vx[3] = this.x + 40;
+        this.vy[3] = this.y + 8;
+        this.vx[4] = this.x + 50;
+        this.vy[4] = this.y + 4;
+        this.vx[5] = this.x + 60;
+        this.vy[5] = this.y + 10;
+        this.vx[6] = this.x + 85;
+        this.vy[6] = this.y + 6;
+        this.vx[7] = this.x + 90;
         this.vy[7] = this.y;
     }
 
-    flow1(){
+    flow1() {
         this.i = 0;
-        while(this.i<8){
-            this.vy[this.i]+=5;
+        while (this.i < 8) {
+            this.vy[this.i] += 5;
             this.i++;
         }
     }
 
     s2() {
         this.vx[0] = this.x;
-        this.vy[0] = this.y-5;
-        this.vx[1] = this.x+3;
-        this.vy[1] = this.y+10;
-        this.vx[2] = this.x+30;
-        this.vy[2] = this.y+10;
-        this.vx[3] = this.x+40;
-        this.vy[3] = this.y+8;
-        this.vx[4] = this.x+50;
-        this.vy[4] = this.y+12;
-        this.vx[5] = this.x+60;
-        this.vy[5] = this.y+13;
-        this.vx[6] = this.x+97;
-        this.vy[6] = this.y+12;
-        this.vx[7] = this.x+100;
-        this.vy[7] = this.y-2;
+        this.vy[0] = this.y - 5;
+        this.vx[1] = this.x + 3;
+        this.vy[1] = this.y + 10;
+        this.vx[2] = this.x + 30;
+        this.vy[2] = this.y + 10;
+        this.vx[3] = this.x + 40;
+        this.vy[3] = this.y + 8;
+        this.vx[4] = this.x + 50;
+        this.vy[4] = this.y + 12;
+        this.vx[5] = this.x + 60;
+        this.vy[5] = this.y + 13;
+        this.vx[6] = this.x + 97;
+        this.vy[6] = this.y + 12;
+        this.vx[7] = this.x + 100;
+        this.vy[7] = this.y - 2;
     }
 
-    flow2(){
+    flow2() {
         this.i = 0;
-        while(this.i<8){
-            this.vy[this.i]+=1;
+        while (this.i < 8) {
+            this.vy[this.i] += 1;
             this.i++;
         }
         this.vx[1]--;
@@ -184,29 +184,29 @@ class water_patch {
     }
 
     s3() {
-        this.y-=5;
+        this.y -= 5;
         this.vx[0] = this.x;
-        this.vy[0] = this.y-5;
-        this.vx[1] = this.x+13;
+        this.vy[0] = this.y - 5;
+        this.vx[1] = this.x + 13;
         this.vy[1] = this.y;
-        this.vx[2] = this.x+10;
-        this.vy[2] = this.y+15;
-        this.vx[3] = this.x+40;
-        this.vy[3] = this.y+20;
-        this.vx[4] = this.x+60;
-        this.vy[4] = this.y+15;
-        this.vx[5] = this.x+90;
-        this.vy[5] = this.y+20;
-        this.vx[6] = this.x+92;
-        this.vy[6] = this.y+20;
-        this.vx[7] = this.x+100;
-        this.vy[7] = this.y-5;
+        this.vx[2] = this.x + 10;
+        this.vy[2] = this.y + 15;
+        this.vx[3] = this.x + 40;
+        this.vy[3] = this.y + 20;
+        this.vx[4] = this.x + 60;
+        this.vy[4] = this.y + 15;
+        this.vx[5] = this.x + 90;
+        this.vy[5] = this.y + 20;
+        this.vx[6] = this.x + 92;
+        this.vy[6] = this.y + 20;
+        this.vx[7] = this.x + 100;
+        this.vy[7] = this.y - 5;
     }
-    
-    flow3(){
+
+    flow3() {
         this.i = 0;
-        while(this.i<8){
-            this.vy[this.i]+=0.8;
+        while (this.i < 8) {
+            this.vy[this.i] += 0.8;
             this.i++;
         }
         this.vx[6]++;
@@ -214,12 +214,12 @@ class water_patch {
     }
 
     show() {
-        fill(0,102,255);
+        fill(0, 102, 255);
         noStroke();
         beginShape();
         curveVertex(this.vx[0], this.vy[0]);
-        this.i=0;
-        while(this.i<8){
+        this.i = 0;
+        while (this.i < 8) {
             curveVertex(this.vx[this.i], this.vy[this.i]);
             this.i++;
         }
