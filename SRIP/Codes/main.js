@@ -15,19 +15,19 @@ function draw() {
 	var x = (windowWidth - width) / 2;
 	var y = (windowHeight - height) / 2;
 	cnv.position(x, y);
-	
+
 	//not working
-	if(change == window.innerHeight + window.innerWidth){
+	if (change == window.innerHeight + window.innerWidth) {
 		change = window.innerHeight + window.innerWidth;
 		stuff();
 	}
 	background(255);
-	
-	
-	
+
+
+
 	fill(0);
 	textSize(4 / 3 * window.innerWidth * 0.02);
-	text('Consolidation Test', (windowWidth - width) / 2, window.innerWidth * 0.035);
+	text('Consolidation Test', (windowWidth - width) / 2 + 5 * window.innerWidth * 0.02, window.innerWidth * 0.035);
 
 	s[0].show();
 	w[0].show(0);
@@ -54,7 +54,7 @@ function draw() {
 				wtn = w[0].fall(wtn, Math.floor(415 / 610 * window.innerHeight * 0.95), 1);
 				break;
 			case 2:
-				s[1].compress(Math.floor(5 / 6 * window.innerHeight * 0.95));
+				s[1].compress(10);
 				wtr[0].flow1();
 				wtn = w[0].fall(wtn, Math.floor(42 / 61 * window.innerHeight * 0.95), 1);
 				break;
@@ -62,7 +62,7 @@ function draw() {
 				wtn = w[1].fall(wtn, Math.floor(415 / 610 * window.innerHeight * 0.95), 2);
 				break;
 			case 4:
-				s[2].compress(3 / 4 * window.innerHeight * 0.95);
+				s[2].compress(20);
 				wtr[1].flow2();
 				wtn = w[1].fall(wtn, Math.floor(430 / 610 * window.innerHeight * 0.95), 2);
 				break;
@@ -70,7 +70,7 @@ function draw() {
 				wtn = w[2].fall(wtn, Math.floor(415 / 610 * window.innerHeight * 0.95), 3);
 				break;
 			case 6:
-				s[3].compress(2 / 3 * window.innerHeight * 0.95);
+				s[3].compress(30);
 				wtr[2].flow3();
 				wtn = w[2].fall(wtn, Math.floor(435 / 610 * window.innerHeight * 0.95), 3);
 				break;
@@ -83,10 +83,8 @@ function draw() {
 }
 
 function strt() {
-	// if (start != 1)
-	 	start = 1;
-	// else
-		stuff();
+	start = 1;
+	stuff();
 	wtn = 1;
 }
 
@@ -97,10 +95,10 @@ function stuff() {
 	s[3] = new soil(550);
 	s[4] = new soil(700);
 
-	w[0] = new weight(250);
-	w[1] = new weight(400);
-	w[2] = new weight(550);
-	w[3] = new weight(700);
+	w[0] = new weight(255);
+	w[1] = new weight(405);
+	w[2] = new weight(555);
+	w[3] = new weight(705);
 
 	wtr[0] = new water_patch(250);
 	wtr[1] = new water_patch(400);
