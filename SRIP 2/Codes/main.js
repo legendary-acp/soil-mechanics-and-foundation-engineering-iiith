@@ -4,11 +4,15 @@ let wtn = 1;
 var change = 0;
 var ww = window.innerWidth,
 	wh = window.innerHeight;
+
 function init() {
-		start = 1;
-		stuff();
-		wtn = 1;
-	}
+	start = 1;
+	stuff();
+	wtn = 1;
+	ut = new upper_tool();
+	sl = new soil(ut);
+}
+
 function setup() {
 	noStroke();
 	stuff();
@@ -19,11 +23,11 @@ function draw() {
 	var x = (windowWidth - width) / 2;
 	var y = (windowHeight - height) / 2;
 	cnv.position(x, y);
-
+	stuff();
 	//not working
 	if (change == wh + ww) {
 		change = wh + ww;
-		stuff();
+
 	}
 	background(255);
 
@@ -35,11 +39,12 @@ function draw() {
 
 	if (start % 2 == 1) {
 		ut.show();
+		sl.show();
 	}
 }
 
 
 
 function stuff() {
-	ut = new upper_tool();
+
 }
