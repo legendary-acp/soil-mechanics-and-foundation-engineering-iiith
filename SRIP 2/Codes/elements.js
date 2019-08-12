@@ -36,7 +36,7 @@ class soil {
     }
 
     show() {
-        stroke(129,60,32)
+        stroke(129, 60, 32)
         fill(129, 60, 32);
         rect(this.x1, this.y1, this.width, this.height);
         rect(this.x2, this.y2, this.width, this.height);
@@ -84,7 +84,7 @@ class upper_tool {
         this.height6 = this.height2;
         this.y6 = this.y2 + 0.13 * ch - this.height6;
         this.width6 = 0.2 * cw;
-        this.wdt = 0.05 * cw;
+        this.wdt = 0.04 * cw;
 
         this.x7 = this.x6 + 0.05 * cw;
         this.y7 = this.y6 - 0.05 * ch;
@@ -107,8 +107,8 @@ class upper_tool {
     }
 
     show() {
-        fill(153);
-        stroke(153);
+        fill(93);
+        stroke(94);
         rect(this.x1, this.y1, this.width1, this.height1);
         rect(this.x2, this.y2, this.width2, this.height2);
         rect(this.x3, this.y3, this.width3, this.height3);
@@ -118,14 +118,35 @@ class upper_tool {
         strokeWeight(4)
         stroke(0)
         rect(this.x7, this.y7, this.width7, this.height7);
-        fill(0);
+        fill(93);
+        stroke(94);
         rect(this.x8, this.y8, this.width8, this.height8);
         rect(this.x9, this.y9, this.width9, this.height9);
         rect(this.x6, this.y6, this.width6, this.height6);
-        triangle(this.x6, this.y6, this.x6, this.y6 + this.height,
-            this.x6 - this.wdt, this.y6 + this.height);
-        triangle(this.x6 + this.width6, this.y6, this.x6 + this.width6,
-            this.y6 + this.height, this.x6 + this.wdt + this.width6, this.y6 + this.height);
+        triangle(this.x6, this.y6, this.x6, this.y6 + this.height6, this.x6 - this.wdt, this.y6 + this.height6);
+        triangle(this.x6 + this.width6, this.y6, this.x6 + this.width6, this.y6 + this.height6, this.x6 + this.wdt + this.width6, this.y6 + this.height6);
         circle(this.x10, this.y10, this.rad);
+        fill(255);
+        circle(this.x10, this.y10, this.rad - 5);
+    }
+};
+
+class lower_part {
+    constructor(up, sl) {
+        this.x1 = up.x3;
+        this.y1 = up.y3 + up.height3;
+        this.height = sl.height;
+        this.width = up.width3;
+        this.x2 = up.x4;
+        this.y2 = up.y4 + up.height4;
+        this.x3 = this.x1;
+        this.y3 = this.y1 + this.height;
+        this.height3 = up.height3;
+        this.width3 = up.x4 + up.width4 - up.x3;
+    }
+    show(){
+        rect(this.x1,this.y1,this.width,this.height);
+        rect(this.x2,this.y2,this.width,this.height);
+        rect(this.x3,this.y3,this.width3,this.height3);
     }
 };

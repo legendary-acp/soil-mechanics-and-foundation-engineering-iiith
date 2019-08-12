@@ -7,15 +7,14 @@ var ww = window.innerWidth,
 
 function init() {
 	start = 1;
-	stuff();
 	wtn = 1;
 	ut = new upper_tool();
 	sl = new soil(ut);
+	lt = new lower_part(ut,sl);
 }
 
 function setup() {
 	noStroke();
-	stuff();
 }
 
 function draw() {
@@ -23,16 +22,11 @@ function draw() {
 	var x = (windowWidth - width) / 2;
 	var y = (windowHeight - height) / 2;
 	cnv.position(x, y);
-	stuff();
 	//not working
 	if (change == wh + ww) {
 		change = wh + ww;
-
 	}
 	background(255);
-
-
-
 	fill(0);
 	textSize(4 / 3 * ww * 0.02);
 	text('Direct Shear Test', (windowWidth - width) / 2 + 5 * ww * 0.02, ww * 0.035);
@@ -40,11 +34,6 @@ function draw() {
 	if (start % 2 == 1) {
 		ut.show();
 		sl.show();
+		lt.show();
 	}
-}
-
-
-
-function stuff() {
-
 }
