@@ -68,7 +68,7 @@ class soil {
     text_write(){
         fill(255);
         textSize(4 / 3 * ch * 0.02);
-            text('Compaction Soil', this.x1 + this.width/2 - 0.01 * cw, this.y1 + 0.025 * ch);
+            text('Compaction Soil', this.x1 + this.width/2 - 0.05 * cw, this.y1 + 0.025 * ch);
     }
 
     show() {
@@ -95,6 +95,7 @@ class soil {
                 this.it += 1;
             }
         }
+        this.text_write();
     }
 };
 
