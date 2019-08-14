@@ -1,0 +1,235 @@
+{
+    "artciles": [
+        {
+            "quiztitle":"Quiz for Experiment",
+            "containers":"5"
+        },
+        {
+            "q": " Shearing resistance can be determined in the laboratory by _________ methods.",
+            "option": [
+                "2",
+                "6",
+                "4",
+                "8"
+            ],
+            "answer": "4",
+            "description": "Shearing resistance can be determined in the laboratory by following four methods
+            i) Direct shear test
+            ii) Tri axial shear test
+            iii) Unconfined shear test
+            iv) Vane shear test."
+        },
+        {
+            "q": "Which of the following shear test is developed based on drainage conditions?",
+            "option": [
+                "Quick test and Consolidated un drained test",
+                "Direct Shear Test",
+                "None of the mentioned",
+                "All of the mentioned"
+            ],
+            "answer": "Quick test and Consolidated un drained test",
+            "description": "Depending upon drainage conditions, three types of shear tests have been developed:
+            i) Un-drained test or quick test
+            ii) Consolidated un-drained test
+            iii) Drained test."
+        },
+        {
+            "q": "The direct shear test can also be called as ___________",
+            "option": [
+                "Simple shear test",
+                "Stress test",
+                "Strain controlled shear box test",
+                "All of the mentioned"
+            ],
+            "answer": "Stress test",
+            "description": "Since the shearing strain is made to increase at a constant rate in a direct shear test, and hence the test is called the Strain controlled shear box test."
+        },
+        {
+            "q": "The commonly used apparatus used for performing shear box test is ___________",
+            "option": [
+                "Shear-box apparatus",
+                "Bishop’s pore pressure apparatus",
+                "Tri axial shear test apparatus",
+                "None of the mentioned"
+            ],
+            "answer": "Shear-box apparatus",
+            "description": "Shear-box test is the most commonly used apparatus for the direct shear test."
+        },
+        {
+            "q": "To conduct un-drained test, which of the following is used?",
+            "option": [
+                "Slope Grids",
+                "Perforated Grids",
+                "Plain Grids",
+                "All of the mentioned"
+            ],
+            "answer": "Plain Grids",
+            "description": "To conduct un-drained test, plane grids are used and for the drained test, perforated grids are used."
+        }
+        {
+            "q": "The drained test is also known as ___________",
+            "option": [
+                "Direct shear test",
+                "Slow test",
+                "Vane shear test",
+                "Quick test"
+            ],
+            "answer": "Slow test",
+            "description": "In drained test, perforated grids are sheared sufficiently slowly so that complete dissipation of pore pressure takes place."
+        }
+        {
+            "q": "Which of the following is a disadvantage of the shear box test?",
+            "option": [
+                "Stress condition of soil is complex",
+                "The test cannot be used for coarse grained soil",
+                "No control on the drainage of soil",
+                "The shear box test is more complex test"
+            ],
+            "answer": "Stress condition of soil is complex",
+            "description": "The stress condition across the soil sample is very complex. The distribution of normal stresses and shearing stresses over the potential surface of sliding is not uniform. The entire strength of the soil is not mobilized simultaneously."
+        }
+        {
+            "q": "The shearing of cohesive soil in drained test requires ___________ days.",
+            "option": [
+                "2",
+                "1 to 2",
+                "2 to 5",
+                "1"
+            ],
+            "answer": "2 to 5",
+            "description": "As the soil in drained test is sheared sufficiently slowly so that complete dissipation of pore pressure takes place, it takes 2 to 5 days long for shearing cohesive type of soil."
+        }
+        {
+            "q": "A major difference between the direct shear test and tri axial shear test is _____________",
+            "option": [
+                "Control on the drainage level",
+                "Stress condition",
+                "None of the mentioned",
+                "All of the mentioned"
+            ],
+            "answer": "Control on the drainage level",
+            "description": "As compared to the tri axial system, there is a little control on the drainage of soil in the direct shear test."
+        }
+        {
+            "q": " In direct shear test, the soil load is subjected to more stress at _____________",
+            "option": [
+                "Center",
+                "Edges",
+                "Top to bottom",
+                "All of the mentioned"
+            ],
+            "answer": "Edges",
+            "description": "In a direct shear test, the stress condition across the soil sample are very complex, the stress is more at the edges and less in the Centre. Due to this, there is a progressive failure of the specimen." 
+        }
+        {
+            "q": "The un-drained test is carried out on sample of clay, silt, and peat to determine _____________",
+            "option": [
+                "Shear Strength of natural ground and Sensitivity",
+                "Pore pressure",
+                "None of the mentioned",
+                "All of the mentioned"
+            ],
+            "answer": "Shear Strength of natural ground and Sensitivity",
+            "description": "The un-drained test is carried out on undisturbed sample of clay, silt and peat to determine the strength of the natural ground and also carried out on remoulded samples of clay to measure it its sensitivity." 
+        }
+        {
+            "q": "In an un-drained test on saturated clays, both σ1’ and σ3’ is independent of ____________",
+            "option": [
+                "Pore pressure",
+                "Shear strength",
+                "Cell pressure",
+                "Effective pressure"
+            ],
+            "answer": "Cell pressure",
+            "description": "In an un-drained test on saturated clays (B=1), both the major principal effective stress σ1’ and the minor principal effective stress σ3’ are independent of the magnitude of cell pressure applied." 
+        }
+        {
+            "q": "The consolidated-un drained test can be performed in ___________ methods.",
+            "option": [
+                "3",
+                "2",
+                "4",
+                "1"
+            ],
+            "answer": "2",
+            "description": "The consolidated-undrained tests are performed by two methods: i) the remoulded specimens are sheared under a cell pressure. ii) the moulded specimens are consolidated under the same cell pressure and sheared with different cell pressure." 
+        }
+        {
+            "q": "Which of the following cannot be obtained by using un-drained test?",
+            "option": [
+                "Effective stress failure envelope",
+                "Shear strength",
+                "Sensitivity",
+                "All of the mentioned"
+            ],
+            "answer": "Effective stress failure envelope",
+            "description": "Since only one Mohr circle in terms of effective stresses, is obtained from all un-drained tests, effective stress failure envelope cannot be obtained from this test." 
+        }
+        {
+            "q": "The change in the pore pressure during an un-drained shear can be explained by ___________",
+            "option": [
+                "Lateral pressure",
+                "Effective stress",
+                "Pore pressure parameter",
+                "Mohr’s circle"
+            ],
+            "answer": "Pore pressure parameter",
+            "description": "The change in the pore pressure due to change in the applied stress, during an un-drained, any be explained in terms of empirical coefficients called pore pressure parameters." 
+        }
+        {
+            "q": "Factor affecting pore pressure parameters is ___________",
+            "option": [
+                "Type of shear",
+                "Temperature",
+                "Nature of the fluid",
+                "All of the mentioned"
+            ],
+            "answer": "All of the mentioned",
+            "description": "Type of shear, sample disturbance, and environment during shear such as temperature and nature of the fluid are the factors that affect pore pressure parameter." 
+        }
+        {
+            "q": "The value of pore pressure parameter, at failure for saturated clay is __________",
+            "option": [
+                "1.2 to 2.5",
+                "2 to 3",
+                "0.3 to 0.7",
+                "0.7 to 1.3"
+            ],
+            "answer": "2 to 3",
+            "description": "The approximate value of pore pressure parameter at failure for very loose, fine saturated sand, saturated clays is 2 to 3." 
+        }
+        {
+            "q": "Negative pore pressure in clay or sand is developed due to __________",
+            "option": [
+                "Expansion on loading",
+                "Over loading",
+                "Loose structure",
+                "Compaction"
+            ],
+            "answer": "Expansion on loading",
+            "description": "A negative pore pressure is developed when we apply load on a sample of clay or sand because both sand and clay tends to expand on loading." 
+        }
+        {
+            "q": "If the pore pressure is measured during un-drained stage of the test, the result can be expressed in terms of __________",
+            "option": [
+                "C’ and φ",
+                "cu",
+                "None of above",
+                "All of the above"
+            ],
+            "answer": "C’ and φ",
+            "description": "Both effective parameters C’ and φ’ can be expressed when pore pressure is measured during un-drained stage of the test." 
+        }
+        {
+            "q": "The equation for the unconsolidated un drainage strength of clay is __________",
+            "option": [
+                "τ = c + σ tan φ",
+                "τf = ccu + σ tan φcu",
+                "τ = c + σ",
+                "τ = σ tan φ"
+            ],
+            "answer": " τf = ccu + σ tan φcu",
+            "description": "The equation for consolidated undrained strength of the preconsolidated clay in terms of total stress can be approximately expressed as τf = ccu + σ tan φcu where, σ is the normal pressure." 
+        }
+    ]
+}
