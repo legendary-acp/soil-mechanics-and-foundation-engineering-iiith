@@ -10,19 +10,11 @@ This document captures the instructions to run the simulation.
 
 ![](img/1.png)
 
-2. To run the experiment of consolidation, click on **Start** button on top right corner.
+2. To run the experiment of direct shear, click on **Start** button on top right corner.
 
 ![](./img/2.png)
 
-3. Animation will start, demonstrating the various cases of experiment.
-
-**Case 1** : Load of 1 ton is dropped on soil, compressing soil.
-
-**Case 2** : Load of 5 ton is dropped on soil, compressing soil.
-
-**Case 3** : Load of 10 ton is dropped on soil, compressing soil.
-
-**Case 4** : Load of 10 ton is lifted of the soil, expanding soil.
+3. Animation will start, demonstrating the shear strength of soil.
 
 ![](./img/3.png)
 

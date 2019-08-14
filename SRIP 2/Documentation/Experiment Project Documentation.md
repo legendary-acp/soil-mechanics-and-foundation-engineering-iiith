@@ -10,13 +10,13 @@ This document captures the technical details related to the experiment developme
 
 **Lab Name:** Soil mechanics and foundation engineering
 
-**Experiment Name:** Consolidation Test
+**Experiment Name:** Direct Shear Test
 
 
 
 **Purpose of the project**
 
-The purpose of the project is to convert the **Consolidation Test** experiment simulation from **Flash Player** to **JavaScript**.
+The purpose of the project is to convert the **Direct Shear Test** experiment simulation from **Flash Player** to **JavaScript**.
 
 **Project Developers Details  **
 
@@ -65,7 +65,8 @@ The purpose of the project is to convert the **Consolidation Test** experiment s
 
 1. Finding perfect framework for work.
 2. Combining all things together.
+3. Making experiment responsive.
 
 **Issues:**
 
-1. Webpage is not responsive.
+1. On changing size of window you need to refresh to see experiment properly.
